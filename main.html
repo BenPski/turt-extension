@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    min-width: 250px;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 5px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<button class="accordion" id="connection-section">Connection</button>
+<div class="panel">
+    <label for="host">Host:</label>
+    <input type="text" id="host" placeholder="Host"></input><br>
+    <label for="port">Port:</label>
+    <input type="text" id="port" placeholder="Port"></input>
+</div>
+
+<button class="accordion" id="vault-section">Vault</button>
+<div class="panel">
+    <div id="vault-selection">
+        <label for="vaults">Available:</label>
+        <select id="vaults">
+        </select>
+    </div>
+    <div id="vault-creation">
+        <input type="text" id="vault_edit" placeholder="Vault"></input>
+        <input type="password" id="password_edit" placeholder="Password"></input>
+        <button id="create_vault">create</button>
+        <button id="delete_vault" disabled>delete</button>
+    </div>
+</div>
+
+<button class="accordion" id="action-section">Action</button>
+<div class="panel">
+    <div id="action">
+        <label for="entries">Vault entries:</label>
+        <select id="entries">
+        </select>
+        <div id="action">
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "turt",
+    "description": "Interface with a turt vault",
+    "version": "0.1",
+    "action": {
+        "default_popup": "main.html"
+    },
+    "icons": {
+        "16": "images/icon_16.png",
+        "48": "images/icon_48.png",
+        "96": "images/icon_96.png",
+        "128": "images/icon_128.png"
+    },
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+B",
+                "mac": "Command+B"
+            }
+        }
+    },
+    "permissions": ["activeTab", "scripting", "storage"]
+}
